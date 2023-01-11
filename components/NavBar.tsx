@@ -8,7 +8,7 @@ type Props = {
 const NavBar = (props: Props) => {
     
   return (
-    <div className='grid w-full h-full grid-rows-12 '>
+    <div className='grid w-full h-full grid-rows-12 bg-gray-900 text-white '>
 
 
     <div className='flex justify-between text-white font-serif text-lg  m-3 row-start-1 row-end-2 '>

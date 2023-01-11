@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 type Data = {
   name:string,
-  explanation:string
+  explanation:string,
+  date:String
 }
 
 type Props = {
@@ -19,6 +20,7 @@ const Blog = (props: Props) => {
         <div  className='text-center my-3 ' key={key}>
           <h2 className='' >{post.name}</h2>
           <p>{post.explanation}</p>
+          <h6>{post.date}</h6>
         </div>
       ))
     }
