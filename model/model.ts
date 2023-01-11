@@ -7,6 +7,7 @@ const testSchema = new Schema({
     required: true,
     unique: true,
   },
+  date: String
 });
 
 const Test = models.Posts || model('Posts', testSchema);

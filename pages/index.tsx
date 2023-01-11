@@ -10,18 +10,21 @@ import NavBar from '../components/NavBar';
 type Props = {
   post:[
     name: string,
-    explanation:string
+    explanation:string,
+    date:Date
   ]
   
 }
 type Data = {
   name:string,
-  explanation:string
+  explanation:string,
+  date:Date
 }
 
 
 
 const Home =  ( {post}:Props ) => {
+  
 
   const [data, setData] = React.useState<[Data]>([{
     name: 'Sexavet',
@@ -32,19 +35,7 @@ const Home =  ( {post}:Props ) => {
     setData(post)
   })
   
-  // const res =async () => {
-  //   await axios.get('/api/post/getPost')
-  //   .then(response => setData(response.data))
-  //   .catch(err => console.log(err))
-  // }
-  // const connectDB =async () => {
-  //   await axios.get('/api/post/connect')
-  // }
 
-
-  // useEffect(() => {
-  //   res()
-  // },[])
 
 
 

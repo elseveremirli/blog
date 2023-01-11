@@ -10,7 +10,8 @@ type Data = {
     type: String,
     required: true,
     unique: true,
-  }
+  },
+  date: String,
 }
 
 export default async function handler(
