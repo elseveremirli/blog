@@ -10,6 +10,6 @@ const testSchema = new Schema({
   date: String
 });
 
-const Test = models.Posts || model('Posts', testSchema);
+const Post = models.Posts || model('Posts', testSchema);
 
-export default Test;
+export default Post;
