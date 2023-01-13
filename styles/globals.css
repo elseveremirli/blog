@@ -16,3 +16,8 @@ html ,body{
     position: fixed;
     margin: 0;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  

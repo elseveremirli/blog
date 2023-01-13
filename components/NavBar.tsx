@@ -20,7 +20,7 @@ const NavBar = (props: Props) => {
     </div>
 
 
-    <div className='row-start-2 row-end-12'>
+    <div className='row-start-2 row-end-12 overflow-y-auto  '>
     {
       props.children
     }
