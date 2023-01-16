@@ -5,7 +5,8 @@ import Link from 'next/link';
 type Data = {
   name:string,
   explanation:string,
-  date:String
+  date:String,
+  _id:string,
 }
 
 type Props = {
@@ -13,15 +14,18 @@ type Props = {
 }
 
 const Blog = (props: Props) => {
+  console.log();
 
   return (
-    <div className='w-full h-full flex items-center  flex-col  text-white '>{
+    <div className='w-full h-full flex items-center  text-white '>{
       props.post.map((post:Data,key:any)=>(
-        <div  className='text-center my-3 w-52 ' key={key}>
+        <Link href={`/post/${post._id}`} key={key}>
+        <div  className='text-center my-3 w-52 hover:text-cyan-400 ' key={key}>
           <h2 className='' >{post.name}</h2>
-          <p>{post.explanation}</p>
+          <p>{(post.explanation.length >100) ?  post.explanation.slice(0,99)+'....' : post.explanation }</p>
           <h6>{post.date}</h6>
         </div>
+        </Link>
       ))
     }
     </div>
