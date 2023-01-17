@@ -8,10 +8,10 @@ type Props = {
 const NavBar = (props: Props) => {
     
   return (
-    <div className='grid w-full h-full grid-rows-12 bg-gray-900 text-white disable-select '>
+    <div className='grid w-full h-full grid-rows-12 bg-gray-900 text-white  '>
 
 
-    <div className='flex justify-between text-white font-serif text-lg  m-3 row-start-1 row-end-2 '>
+    <div className='flex justify-between text-white font-serif text-lg  m-3 row-start-1 row-end-2 disable-select '>
         <div className='hover:text-gray-400 '><Link href='/'>Elsevers'blog</Link></div>
         <div className='flex'>
             <div className='hover:text-gray-400 mx-3 '><Link href='/about'>About</Link></div>
@@ -27,7 +27,7 @@ const NavBar = (props: Props) => {
     </div>
     
 
-    <footer className="bg-gray-900 mb-0 row-start-12 row-end-13">
+    <footer className="bg-gray-900 mb-0 row-start-12 row-end-13 disable-select">
         <div className="px-4 py-6 bg-gray-900 md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-500  sm:text-center">© 2023 <a href="https://www.instagram.com/the.horror.st/">Elsevers™</a>. All Rights Reserved.
             </span>

@@ -12,7 +12,7 @@ type Props = {
 type Data = {
   name:string,
   explanation:string,
-  date:Date
+  date:string
 }
 
 
@@ -23,10 +23,10 @@ const Post = ({post}:Props) => {
   console.log(post)
 
   return (
-    <div className='text-center' >
+    <div className=' text-center' >
       <h1>{post[0].name}</h1>
       <p>{post[0].explanation}</p>
-      <h3>{post[0].date}</h3>
+      <h3>{post[0].date}</h3> 
     </div>
     )
 }
