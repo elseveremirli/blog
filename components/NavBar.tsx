@@ -1,21 +1,45 @@
-import React from 'react'
+import { useState, useEffect } from 'react';
 import Link from 'next/link'
+import { useSession, signIn, signOut } from "next-auth/react"
+
 
 type Props = {
   children: JSX.Element;
 }
 
 const NavBar = (props: Props) => {
+    const { data: session } = useSession()
+
+    const [status,setStatus] = useState('')
+    
+
+    const handleClick = (e:any) => {
+        e.preventDefault()
+        if(session){
+           signOut() 
+        }else{
+            signIn()
+        }
+    }
+
+    useEffect(()=>{
+        if(session){
+            setStatus("SignOut")
+        }else{
+            setStatus("SignIn")
+        }
+    })
     
   return (
     <div className='grid w-full h-full grid-rows-12 bg-gray-900 text-white  '>
 
 
     <div className='flex justify-between text-white font-serif text-lg  m-3 row-start-1 row-end-2 disable-select '>
-        <div className='hover:text-gray-400 '><Link href='/'>Elsevers'blog</Link></div>
+        <div className='hover:text-gray-400 '><Link href='/'>Elsever's blog</Link></div>
         <div className='flex'>
-            <div className='hover:text-gray-400 mx-3 '><Link href='/about'>About</Link></div>
-            <div className='hover:text-gray-400 '><Link href='/post/addpost' >Add Post</Link></div>
+            <div className='hover:text-gray-400  '><Link href='/about'>About</Link></div>
+            <div className='hover:text-gray-400 mx-3'><Link href='/post/addpost' >Add Post</Link></div>
+            <div className='hover:text-gray-400 '><button onClick={handleClick} >{status}</button></div>
         </div>
     </div>
 
@@ -29,7 +53,7 @@ const NavBar = (props: Props) => {
 
     <footer className="bg-gray-900 mb-0 row-start-12 row-end-13 disable-select">
         <div className="px-4 py-6 bg-gray-900 md:flex md:items-center md:justify-between">
-            <span className="text-sm text-gray-500  sm:text-center">© 2023 <a href="https://www.instagram.com/the.horror.st/">Elsevers™</a>. All Rights Reserved.
+            <span className="text-sm text-gray-500  sm:text-center">© 2023 <a href="https://www.instagram.com/the.horror.st/">Elsever's™</a>. All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
                 <a href="https://www.facebook.com/elsever.emirli.33/" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">

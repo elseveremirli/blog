@@ -12,6 +12,7 @@ type Data = {
     unique: true,
   },
   date: String,
+  password: String,
 }
 
 export default async function handler(
@@ -19,7 +20,8 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   try {
-    console.log('CONNECTING TO MONGO');
+    if(req.body.password == process.env.PASSWORD) {
+      console.log('CONNECTING TO MONGO');
     await connectDB();
     console.log('CONNECTED TO MONGO');
     console.log('CREATING DOCUMENT');
@@ -28,6 +30,7 @@ export default async function handler(
 
     await post.save();
     res.json( post );
+    }
   } catch (error) {
     console.log(error);
   }

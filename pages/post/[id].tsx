@@ -1,8 +1,7 @@
-import { useRouter } from 'next/router'
-import axios from 'axios';
 import connectDB from '../../utils/connectDB';
 import model from '../../model/model';
 import {GetStaticProps } from 'next'
+import  Head  from 'next/head';
 
 
 type Props = {
@@ -23,11 +22,16 @@ const Post = ({post}:Props) => {
   console.log(post)
 
   return (
+    <>
+    <Head>
+      <title>Blog</title>
+    </Head>
     <div className=' text-center' >
       <h1>{post[0].name}</h1>
       <p>{post[0].explanation}</p>
       <h3>{post[0].date}</h3> 
     </div>
+    </>
     )
 }
 
