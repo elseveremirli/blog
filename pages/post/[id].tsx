@@ -26,7 +26,7 @@ const Post = ({post}:Props) => {
     <Head>
       <title>Blog</title>
     </Head>
-    <div className=' text-center' >
+    <div className=' text-center p-5' >
       <h1>{post[0].name}</h1>
       <p>{post[0].explanation}</p>
       <h3>{post[0].date}</h3> 
