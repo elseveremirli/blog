@@ -45,7 +45,7 @@ export const getServerSideProps:GetStaticProps = async ({params})=>{
   try {
     console.log('CONNECTING TO MONGO');
     await connectDB();
-    console.log('CONNECTED TO MONGO');
+    console.log('CONNECTED TO MONGO');// @ts-ignore
     const post = await model.find({_id:params.id})
     return{
       props:{
