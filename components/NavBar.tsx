@@ -9,7 +9,8 @@ type Props = {
 
 const NavBar = (props: Props) => {
     const { data: session } = useSession()
-
+    
+    
     const [status,setStatus] = useState('')
     
 

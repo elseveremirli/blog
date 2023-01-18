@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import Head from 'next/head'
-import bcrypt from 'bcrypt';
+import { useSession } from "next-auth/react"
 
 
 type Props = {}
@@ -9,30 +9,35 @@ type Props = {}
 const AddPost = (props: Props) => {
 
   const [name,setName] = useState('')
-  const [password,setPassword] = useState('')
   const [explanation,setExplanation] = useState('')
 
 
-  console.log(typeof  bcrypt.hash('elseveremirli2006.',20)  )
+
+  const { data: session } = useSession()
   
 
   const handleSubmit = async (e:any)=>{
  
     e.preventDefault()
-    if(password === process.env.PASSWORD){
-      const  dates =  new Date()
+    if(session){
+      if(session.user?.name == "Elsever Emirli"){
+        const  dates =  new Date()
       const date =  dates.toDateString()
       await axios.post('/api/post/add',{
         name: name,
         explanation: explanation,
         date:date,
-        password:password,
       })
       .then(response => console.log(response))
       .catch((err)=>{console.log(err)})
+      }else{
+        console.log("Wrong password")
+      }
+      
     }
     else{
-      console.log("Wrong password");
+      console.log("Please Login");
+      alert("You don't Admin")
       
     }
   }
@@ -46,7 +51,6 @@ const AddPost = (props: Props) => {
       <form onSubmit={handleSubmit} className='text-center disable-select ' >
         <div className="mb-6 text-center">
           <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white  ">Your Name</label>
-          <input  onChange={(e)=> setPassword(e.target.value)} type="password" id="password" className="bg-gray-50 border my-5 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="**************" required />
           <input  onChange={(e)=> setName(e.target.value)} type="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" required />
         </div>
         
