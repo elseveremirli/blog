@@ -10,11 +10,13 @@ export const authOptions:NextAuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID,
       // @ts-ignore
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    })  
+    }) ,
+    
   ],
   theme: {
     colorScheme: "dark",
   },
+  secret: process.env.SECRET
 }
 
 export default NextAuth(authOptions)
