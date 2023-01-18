@@ -30,7 +30,7 @@ module.exports = {
         '14': '14',
       
     },
-    minWidth: {
+    maxWidth: {
       'ss': '400',
     }
     },
