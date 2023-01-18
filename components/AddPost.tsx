@@ -19,8 +19,8 @@ const AddPost = (props: Props) => {
   const handleSubmit = async (e:any)=>{
  
     e.preventDefault()
-    if(1==1){
-      if(1==1){
+    if(session){
+      if(session.user?.name == "Elsever Emirli"){
         const  dates =  new Date()
       const date =  dates.toDateString()
       await axios.post('/api/post/add',{
