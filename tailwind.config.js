@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       gridTemplateRows: {
         // Simple 8 row grid
-        '12': 'repeat(12, minmax(0, 1fr))'
+        '12': 'repeat(12, minmax(0, 1fr))',
+        '13': 'repeat(13, minmax(0, 1fr))'
       },
       gridRowStart: {
         '8': '8',

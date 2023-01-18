@@ -32,7 +32,7 @@ const NavBar = (props: Props) => {
     })
     
   return (
-    <div className='grid w-full h-full grid-rows-12 bg-gray-900 text-white  '>
+    <div className='grid w-full h-full grid-rows-13 bg-gray-900 text-white  '>
 
 
     <div className='flex justify-between text-white font-serif text-lg  m-3 row-start-1 row-end-2 disable-select '>
@@ -45,14 +45,14 @@ const NavBar = (props: Props) => {
     </div>
 
 
-    <div className='row-start-2 row-end-12 overflow-y-auto  '>
+    <div className='row-start-2 row-end-13 overflow-y-auto  '>
     {
       props.children
     }
     </div>
     
 
-    <footer className="bg-gray-900 mb-0 row-start-12 row-end-13 disable-select">
+    <footer className="bg-gray-900 mb-0 row-start-13 row-end-14 disable-select">
         <div className="px-4 py-6 bg-gray-900 md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-500  sm:text-center">© 2023 <a href="https://www.instagram.com/the.horror.st/">Elsever's™</a>. All Rights Reserved.
             </span>
