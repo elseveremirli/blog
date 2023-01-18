@@ -37,7 +37,7 @@ const AddPost = (props: Props) => {
     }
     else{
       console.log("Please Login");
-      alert("You don't Admin")
+      alert("You are not Admin")
       
     }
   }
