@@ -52,7 +52,7 @@ const NavBar = (props: Props) => {
     </div>
     
 
-    <footer className="bg-gray-900 m-0 row-start-13 row-end-14 disable-select">
+    <footer className="bg-gray-900 m-0  row-start-13 row-end-14 disable-select">
         <div className="px-4 py-0 my-0 bg-gray-900 md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-500  sm:text-center">© 2023 <a href="https://www.instagram.com/the.horror.st/">Elsever's™</a>. All Rights Reserved.
             </span>
