@@ -7,9 +7,9 @@ export const authOptions:NextAuthOptions = {
   providers: [
     GoogleProvider({
       // @ts-ignore
-      clientId: PUBLIC_GOOGLE_CLIENT_ID,
+      clientId: NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       // @ts-ignore
-      clientSecret: PUBLIC_GOOGLE_CLIENT_SECRET,
+      clientSecret: NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
     }) ,
     
   ],
