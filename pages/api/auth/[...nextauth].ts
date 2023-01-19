@@ -17,6 +17,7 @@ export const authOptions:NextAuthOptions = {
     colorScheme: "dark",
   },
   secret: process.env.SECRET
+  
 }
 
 export default NextAuth(authOptions)

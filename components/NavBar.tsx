@@ -45,15 +45,15 @@ const NavBar = (props: Props) => {
     </div>
 
 
-    <div className='row-start-2 row-end-11 overflow-y-auto  '>
+    <div className='row-start-2 row-end-13 overflow-y-auto  '>
     {
       props.children
     }
     </div>
     
 
-    <footer className="bg-gray-900 mb-0 row-start-11 row-end-13 disable-select">
-        <div className="px-4 py-1 bg-gray-900 md:flex md:items-center md:justify-between">
+    <footer className="bg-gray-900 m-0 row-start-13 row-end-14 disable-select">
+        <div className="px-4 py-0 my-0 bg-gray-900 md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-500  sm:text-center">© 2023 <a href="https://www.instagram.com/the.horror.st/">Elsever's™</a>. All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
