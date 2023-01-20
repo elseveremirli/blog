@@ -9,7 +9,16 @@ module.exports = {
       gridTemplateRows: {
         // Simple 8 row grid
         '12': 'repeat(12, minmax(0, 1fr))',
-        '13': 'repeat(13, minmax(0, 1fr))'
+        '13': 'repeat(13, minmax(0, 1fr))',
+        '14': 'repeat(14, minmax(0, 1fr))',
+        '15': 'repeat(15, minmax(0, 1fr))'
+      },
+      gridTemplateColumns: {
+        // Simple 8 row grid
+        '12': 'repeat(12, minmax(0, 1fr))',
+        '13': 'repeat(13, minmax(0, 1fr))',
+        '14': 'repeat(14, minmax(0, 1fr))',
+        '15': 'repeat(15, minmax(0, 1fr))'
       },
       gridRowStart: {
         '8': '8',
@@ -19,6 +28,8 @@ module.exports = {
         '12': '12',
         '13': '13',
         '14': '14',
+        '15': '15',
+        '16': '16',
       },
       gridRowEnd: {
         '8': '8',
@@ -28,10 +39,23 @@ module.exports = {
         '12': '12',
         '13': '13',
         '14': '14',
+        '15': '15',
+        '16': '16',
       
     },
-    maxWidth: {
-      'ss': '400',
+    gridColumnStart: {
+      '13': '13',
+      '14': '14',
+      '15': '15',
+      '16': '16',
+      '17': '17',
+    },
+    gridColumnEnd: {
+      '13': '13',
+      '14': '14',
+      '15': '15',
+      '16': '16',
+      '17': '17',
     }
     },
   },
