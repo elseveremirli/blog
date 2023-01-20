@@ -35,7 +35,7 @@ const NavBar = (props: Props) => {
     <div className='grid w-full h-full grid-rows-15 max-sm:grid-rows-17 bg-gray-900 text-white  overflow-y-auto '>
 
 
-    <div className='flex justify-between text-white font-serif text-lg  m-3 row-start-1 row-end-2 max-sm:grid-end-2 disable-select '>
+    <div className='flex justify-between  text-white font-serif text-lg  m-3 row-start-1 row-end-2 max-sm:grid-end-2 disable-select '>
         <div className='hover:text-gray-400 '><Link href='/'>Elsever's blog</Link></div>
         <div className='flex'>
             <div className='hover:text-gray-400  '><Link href='/about'>About</Link></div>
