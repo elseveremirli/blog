@@ -7,9 +7,22 @@ const About = () => {
       <title>Add Post</title>
     </Head>    
     <div className='w-full h-full text-center' >
-      <h1>Elsever Emirli</h1>
+      <h1>Elsever Emirli</h1><br/>
       <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.  
+      It was used in the preparation of the web page:<br />
+              1) TypeScript <br />
+              2) Next.js<br />
+              3) Tailwindcss<br />
+              4) Axios<br />
+              5) Node.js<br />
+              6) MongoDB<br />
+              7) Bcrypt<br />
+              8) Mongoose<br />
+              9) Next-auth<br />
+              10) React.js<br />
+                ve s...<br/>
+
+      Detailed Information <a href="https://github.com/Elsever-Emirli">GitHub</a> .
       </p>
     </div>
     </>
