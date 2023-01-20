@@ -45,13 +45,13 @@ const NavBar = (props: Props) => {
     </div>
 
 
-    <div className='row-start-2 row-end-15 overflow-y-auto max-sm:row-end-17  max-sm:row-start-3 '>
+    <div className='row-start-2 row-end-15 overflow-y-auto max-sm:row-end-16  max-sm:row-start-3 '>
     {
       props.children
     }
     </div>
     
-    <footer className=" sm:flex sm:justify-center  rounded-lg shadow md:px-6  bg-gray-900  row-start-15 row-end-16  max-sm:row-start-17  max-sm:row-end-18">
+    <footer className=" sm:flex sm:justify-center  rounded-lg shadow md:px-6  bg-gray-900  row-start-15 row-end-16  max-sm:row-start-16  max-sm:row-end-17">
         <div className=" grid grid-cols-15 max-sm:flex max-sm:items-center max-sm:justify-center w-full h-full ">
             <a href="https://www.instagram.com/the.horror.st/" className="flex sm:items-center   col-start-1 col-end-3">
                 <span className="self-center text-x font-semibold whitespace-nowrap dark:text-white">© 2023 Elsever's™.</span>
