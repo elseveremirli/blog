@@ -20,7 +20,7 @@ const AddPost = (props: Props) => {
  
     e.preventDefault()
     if(session){
-      if(session.user?.name == "Elsever Emirli"){
+      if(session.user?.name == "Elsever"){
         const  dates =  new Date()
       const date =  dates.toDateString()
       await axios.post('/api/post/add',{
